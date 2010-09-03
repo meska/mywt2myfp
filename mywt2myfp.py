@@ -131,7 +131,7 @@ if __name__=='__main__':
                 cf.set(u,'w_last',wt.date_stamp)
                 cf.set(u,'w_status',wt.status)
                 cf.set(u,'w_last_weight',wt.weight)
-                mf = MyFitnessPal(cf.get(u,'login'),cf.get(u,'passwd'))
+                mf = MyFitnessPal(cf.get(u,'myfp_login'),cf.get(u,'myfp_passwd'))
                 if mf.logged_in:
                     if mf.checkinWeight("%s" % wt.weight):
                         print "ok!"

@@ -12,7 +12,7 @@ from ConfigParser import ConfigParser
 
 
 #######################################################################
-class MyFitnessPal():
+class MyFitnessPal:
 
     # Browser Object
     br = Browser()
@@ -54,7 +54,7 @@ class MyFitnessPal():
         except:
             return False
 
-class myWithings():
+class myWithings:
 
     # Browser Object
     br = Browser()

@@ -9,7 +9,9 @@ from datetime import datetime
 import simplejson as json
 from decimal import Decimal
 from ConfigParser import ConfigParser
+import sys,os
 
+iniFile = os.path.join(sys.path[0],"mywt2myfp.ini")
 
 #######################################################################
 class MyFitnessPal:
@@ -116,7 +118,7 @@ class myWithings:
 if __name__=='__main__':
     # apro il config
     cf = ConfigParser()
-    cf.read("mywt2myfp.ini")
+    cf.read(iniFile)
 
     users = cf.sections()
 
@@ -136,4 +138,4 @@ if __name__=='__main__':
 
             else:
                 cf.set(u,'w_status',wt.status)
-    cf.write(file("mywt2myfp.ini","w"))
+    cf.write(file(iniFile,"w"))
